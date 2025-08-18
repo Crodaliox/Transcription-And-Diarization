@@ -1,0 +1,21 @@
+# === Transcription & Diarization configuration with all values ===
+
+# --- General configuration ---
+audio_path: "file/debat2speaker.wav"
+language: "fr"  # All Whisper languages are available
+embedding_dir: "segmentsLocuteur"
+modelWhisp: "medium"
+transcription_duration: 15  # Audio is split into 15-second chunks to ensure coherent transcription
+overlap: 2  # Overlap adds context from the previous segment when moving to the next
+
+# --- Diarization configuration ---
+embedding_duration: 2  # Audio is split into 2-second chunks to detect speakers
+affichageTimestampWord: true  # Display who is speaking and when in the final text (whether diarization is active or not)
+n_speakers: 2  # Define the number of speakers in the audio – crucial for diarization!
+PeopleInformation: True  # Enables or disables estimation of speaker age and gender (if enabled, uses the model ClassificationModel/model.onnx)
+
+# --- Clustering configuration ---
+clustering_metric: "cosine"
+dbscan_min_samples: 5
+tsne_perplexity: 5
+show_Graphique: true  # Show graphs/visualizations of clustering

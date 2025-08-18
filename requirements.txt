@@ -1,0 +1,17 @@
+torch>=2.0
+torchaudio>=2.0
+numpy
+soundfile
+scikit-learn
+matplotlib
+PyYAML
+
+faster-whisper
+
+speechbrain
+
+audonnx
+audinterface
+
+ffmpeg-python
+
